@@ -1,0 +1,122 @@
+﻿using System;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using Didox.Business;
+using Didox.DataBase.Generics;
+
+public partial class _[Template] : System.Web.UI.Page 
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {
+            if (Request["id[Template]"] != null)
+            {
+                Get[Template](int.Parse(Request["id[Template]"]));
+                return;
+            }
+
+            Get[Template]s();
+        }
+    }
+
+    protected void btnSalvar_Click(object sender, EventArgs e)
+    {
+        var [Template] = new [Template]();
+        try
+        {
+            if (txtId.Text != "")
+            {
+                [Template].ID[Template] = int.Parse(txtId.Text);
+                [Template].Get();
+            }
+
+            [SaveClickFields]
+            [Template].Save();
+            Get[Template]((int)[Template].ID[Template]);
+
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "script", "<script>alert('Registro salvo.')</script>");
+        }
+        catch (Exception err)
+        {
+            var erroMessage = err.Message;
+            erroMessage += ", " + err.StackTrace;
+            erroMessage = erroMessage.Replace("\n", " ");
+            erroMessage = erroMessage.Replace("'", "");
+            erroMessage = erroMessage.Replace("\r", " ");
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "script", "<script>alert('" + erroMessage + "')</script>");
+        }
+    }
+
+    private void Get[Template]s()
+    {
+        dvSalvar[Template].Visible = false;
+        dvListar[Template]s.Visible = true;
+        
+        gv[Template]s.DataSource = new [Template]().Find();
+        gv[Template]s.DataBind();
+    }
+
+    private void Get[Template](int id[Template])
+    {
+        dvSalvar[Template].Visible = true;
+        dvListar[Template]s.Visible = false;
+
+        var [Template] = new [Template]();
+        [Template].ID[Template] = id[Template];
+        [Template].Get();
+
+        txtId.Text = [Template].ID[Template].ToString();
+        [FieldsGetById]
+    }
+
+    protected void btnVoltar_Click(object sender, EventArgs e)
+    {
+        Get[Template]s();
+    }
+
+    protected void btnIncluir_Click(object sender, EventArgs e)
+    {
+        dvSalvar[Template].Visible = true;
+        dvListar[Template]s.Visible = false;
+
+        txtId.Text = "";
+        [ClearFields]
+    }
+
+	protected void Delete[Template](int id[Template])
+    {
+        try
+        {
+			var [Template] = new [Template]();
+			[Template].ID[Template] = id[Template];
+			[Template].Delete();
+			Get[Template]s();
+        }
+        catch (Exception err)
+        {
+            var erroMessage = err.Message;
+            erroMessage += ", " + err.StackTrace;
+            erroMessage = erroMessage.Replace("\n", " ");
+            erroMessage = erroMessage.Replace("'", "");
+            erroMessage = erroMessage.Replace("\r", " ");
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "script", "<script>alert('" + erroMessage + "')</script>");
+        }
+    }
+    
+    protected void gv[Template]s_RowCommand(object sender, GridViewCommandEventArgs e)
+    {
+        if (e.CommandName == "Editar")
+            Get[Template](int.Parse(e.CommandArgument.ToString()));
+        else if (e.CommandName == "Excluir")
+			Delete[Template](int.Parse(e.CommandArgument.ToString()));
+    }
+
+    protected void gv[Template]s_PageIndexChanging(object sender, GridViewPageEventArgs e)
+    {
+        gv[Template]s.PageIndex = e.NewPageIndex;
+        Get[Template]s();
+    }
+}

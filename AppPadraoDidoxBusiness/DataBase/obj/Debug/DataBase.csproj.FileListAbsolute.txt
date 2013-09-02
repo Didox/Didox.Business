@@ -1,0 +1,10 @@
+C:\projects\AppPadrao\DataBase\bin\Debug\DataBase.dll
+C:\projects\AppPadrao\DataBase\bin\Debug\DataBase.pdb
+C:\projects\AppPadrao\DataBase\obj\Debug\ResolveAssemblyReference.cache
+C:\projects\AppPadrao\DataBase\obj\Debug\DataBase.dll
+C:\projects\AppPadrao\DataBase\obj\Debug\DataBase.pdb
+C:\Users\didox\Desktop\AppPadraoDidoxBusiness\DataBase\bin\Debug\DataBase.dll
+C:\Users\didox\Desktop\AppPadraoDidoxBusiness\DataBase\bin\Debug\DataBase.pdb
+C:\Users\didox\Desktop\AppPadraoDidoxBusiness\DataBase\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\didox\Desktop\AppPadraoDidoxBusiness\DataBase\obj\Debug\DataBase.dll
+C:\Users\didox\Desktop\AppPadraoDidoxBusiness\DataBase\obj\Debug\DataBase.pdb

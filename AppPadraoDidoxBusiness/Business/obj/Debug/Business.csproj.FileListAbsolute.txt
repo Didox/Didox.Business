@@ -1,0 +1,14 @@
+C:\projects\AppPadrao\Business\obj\Debug\ResolveAssemblyReference.cache
+C:\projects\AppPadrao\Business\bin\Debug\Business.dll
+C:\projects\AppPadrao\Business\bin\Debug\Business.pdb
+C:\projects\AppPadrao\Business\bin\Debug\DataBase.dll
+C:\projects\AppPadrao\Business\bin\Debug\DataBase.pdb
+C:\projects\AppPadrao\Business\obj\Debug\Business.dll
+C:\projects\AppPadrao\Business\obj\Debug\Business.pdb
+C:\Users\didox\Desktop\AppPadraoDidoxBusiness\Business\bin\Debug\Business.dll
+C:\Users\didox\Desktop\AppPadraoDidoxBusiness\Business\bin\Debug\Business.pdb
+C:\Users\didox\Desktop\AppPadraoDidoxBusiness\Business\bin\Debug\DataBase.dll
+C:\Users\didox\Desktop\AppPadraoDidoxBusiness\Business\bin\Debug\DataBase.pdb
+C:\Users\didox\Desktop\AppPadraoDidoxBusiness\Business\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\didox\Desktop\AppPadraoDidoxBusiness\Business\obj\Debug\Business.dll
+C:\Users\didox\Desktop\AppPadraoDidoxBusiness\Business\obj\Debug\Business.pdb
